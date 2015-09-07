@@ -28,15 +28,18 @@
     <![endif]-->
 
     <div class="container">
-        <header></header>
+        <header>
+            <h1>|PL|44444444444444444444444444|002255|odbiorca|tytul przelewu|1|2|n3</h1>
+        </header>
         <div role="main">
             <form name="transferForm">
                 <input type="text" name="recvAccNr" />
                 <input type="text" name="title" />
                 <input type="number" name="amount" value="1" />
-                <button type="submit">Submit</button>
+                <button  type="submit">Submit</button>
+                <button onclick="generateTransferQrCode()">kaka</button>
             </form>
-            <div class="code-container" >
+            <div id="code" >
             </div>
             <div class="transfer-info">
             </div>
@@ -57,6 +60,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/qrcodejs/qrcode.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
