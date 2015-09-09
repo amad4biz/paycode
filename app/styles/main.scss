@@ -4,7 +4,45 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$blue: #003F91;
+$white: #FFFCF7;
+$grey: #3B3D3D;
+
+body {
+    color: $white;
+    background-color: $blue;
+}
+
+form[name=transferForm] {
+
+    input,
+    button {
+        color: $grey;
+        background-color: $white;
+        border-radius: 3px;
+        border: 1px solid $grey;
+    }
+
+    button {
+        padding: 0.5em;
+        display: block;
+        margin: 1em auto;
+        font-size: 20px;
+    }
+
+    input[type=text],
+    input[type=number] {
+        padding: 0.5em;
+        display: block;
+        margin: 1em;
+        font-size: 20px;
+        width: 100%;
+    }
+
+}
+
 #code {
+    margin: auto;
     width: 500px;
     height: 500px;
 }

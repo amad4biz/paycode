@@ -29,15 +29,17 @@
 
     <div class="container">
         <header>
-            <h1>|PL|44444444444444444444444444|002255|odbiorca|tytul przelewu|1|2|n3</h1>
+            <h1>
+                PayCode
+                <small>Generate your money transfer QR code</small>
+            </h1>
         </header>
         <div role="main">
             <form name="transferForm">
-                <input type="text" name="recvAccNr" />
-                <input type="text" name="title" />
-                <input type="number" name="amount" value="1" />
+                <input type="text" name="recvAccNr" placeholder="TRANSFER RECEIVER ACC#" maxlength="34" required />
+                <input type="text" name="title" placeholder="TRANSFER DESCRIPTION" required />
+                <input type="number" name="amount" min="1" max="999999" placeholder="TRANSFER AMOUNT" required />
                 <button  type="submit">Submit</button>
-                <button onclick="generateTransferQrCode()">kaka</button>
             </form>
             <div id="code" >
             </div>
