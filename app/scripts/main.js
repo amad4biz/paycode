@@ -78,7 +78,7 @@
       document.querySelector(sel).style.display = dispVal || 'block';
   }
 
-  function hide(sel, dispVal) {
+  function hide(sel) {
       document.querySelector(sel).style.display = 'none';
   }
 
