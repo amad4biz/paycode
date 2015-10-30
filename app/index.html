@@ -14,6 +14,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans|Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -27,26 +29,38 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div class="bg"></div>
     <div class="container">
         <header>
             <h1>
                 PayCode
-                <small>Generate your money transfer QR code</small>
+                <small>Stwórz swój kod do foto-przelewu.</small>
             </h1>
+            <div class="marketing">
+                Znajomy pożyczył od Ciebie pieniądze? <br/>
+                Ułatw życie sobie i innym. <br/>
+                Stwórz kod do swojej płatności i podeślij linka znajomym. <br/>
+            </div>
         </header>
         <div role="main">
             <form name="transferForm">
-                <input type="text" name="recvAccNr" placeholder="TRANSFER RECEIVER ACC#" maxlength="34" required />
-                <input type="text" name="title" placeholder="TRANSFER DESCRIPTION" required />
-                <input type="number" name="amount" min="1" max="999999" placeholder="TRANSFER AMOUNT" required />
-                <button  type="submit">Submit</button>
+                <input type="text" name="recvName" placeholder="Nazwa odbiorcy" required />
+                <input type="text" name="recvAccNr" placeholder="Numer konta odbiorcy" required />
+                <input type="text" name="title" placeholder="Tytuł przelewu" required />
+                <input type="number" name="amount" min="1" max="999999" placeholder="Kwota" required />
+                <button  type="submit">Stwórz kod</button>
             </form>
-            <div id="code" >
+            <div class="codewrap" >
+                <div id="code" >
+                </div>
             </div>
             <div class="transfer-info">
             </div>
+            <button class="newCodeButton" onclick="document.location='/';">Stwórz nowy kod</button>
         </div>
-        <footer></footer>
+        <footer>
+            Copyright &copy; 2015 Grzegorz Lachowski All rights reserved.
+        </footer>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
