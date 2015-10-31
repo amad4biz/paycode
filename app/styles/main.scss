@@ -101,7 +101,8 @@ form[name=transferForm] {
 
 .codewrap {
     display: none;
-    width: 540px;
+    max-width: 100%;
+    width: 100%;
     margin: auto;
     padding: 20px;
     background-color: white;
@@ -109,7 +110,17 @@ form[name=transferForm] {
 
     #code {
         margin: auto;
-        width: 500px;
-        height: 500px;
+        max-width: 100%;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width:800px){
+    .codewrap {
+        max-width: 500px;
     }
 }

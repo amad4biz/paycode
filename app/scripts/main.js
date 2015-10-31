@@ -25,7 +25,9 @@
       var amountString = Math.floor(amount * 100).toString();
       amountString = AMOUNT_PADDING.substring(0, AMOUNT_PADDING.length - amountString.length) + amountString;
 
-      return '|' + country + '|' + accNr + '|' + amountString + '|' + recvName + '|' + transferTitle + '|' + addon1 + '|' + addon2 + '|' + addon3;
+      var rawdata = '|' + country + '|' + accNr + '|' + amountString + '|' + recvName + '|' + transferTitle + '|' + addon1 + '|' + addon2 + '|' + addon3;
+      var encoded = unescape(encodeURIComponent(rawdata));
+      return encoded;
   }
 
   function getText(fieldName) {
