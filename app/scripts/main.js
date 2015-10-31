@@ -26,7 +26,7 @@
       amountString = AMOUNT_PADDING.substring(0, AMOUNT_PADDING.length - amountString.length) + amountString;
 
       var rawdata = '|' + country + '|' + accNr + '|' + amountString + '|' + recvName + '|' + transferTitle + '|' + addon1 + '|' + addon2 + '|' + addon3;
-      var encoded = unescape(encodeURIComponent(rawdata));
+      var encoded = rawdata;
       return encoded;
   }
 
